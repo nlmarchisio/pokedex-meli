@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.config['EMAIL_USER'] = os.getenv('EMAIL_USER')
 app.config['EMAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
 
-# Decorador para verificar el token JWT
+# Verificacion de Token JWT
 def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
