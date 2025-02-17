@@ -13,9 +13,6 @@ Para obtener los datos de los Pokémon, se utiliza **PokéAPI** como fuente de i
 
 ---
 
-![image](https://github.com/user-attachments/assets/15bb9ead-fd30-478c-8d21-50ca60f85f3b)
-
-
 ## 🚀 Características
 ✅ Autenticación con **JWT y código de verificación por email**  
 ✅ Consulta de **tipos de Pokémon**  
