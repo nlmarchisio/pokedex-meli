@@ -106,3 +106,5 @@ docker-compose down
 💼 LinkedIn: [linkedin.com/in/nlmarchisio93](https://www.linkedin.com/in/nlmarchisio93/)  
 🚀 GitHub: [github.com/nlmarchisio](https://github.com/nlmarchisio)  
 
+📌 **Estrategia IAM para Kimberly.sas**  
+Consulta el documento completo [aquí](IAM-Estrategia.md).
