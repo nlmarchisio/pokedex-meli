@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación - Pokedex MercadoLibre</title>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* FUENTE GLOBAL */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+        }
+
+        /* HEADER */
+        .header-container {
+            background-color: #fff159; /* Amarillo característico de ML */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-logo img {
+            max-height: 40px;
+            margin-right: 20px;
+        }
+
+        /* MAIN */
+        .main-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #262627;
+            font-weight: 700;
+            margin: 20px 0 10px;
+            text-transform: uppercase;
+        }
+
+        .verify-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .verify-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .verify-form input:focus {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .verify-form button {
+            background-color: #3483fa; /* Azul característico */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .verify-form button:hover {
+            background-color: #2968c8;
+            transform: scale(1.05);
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header-container">
+        <div class="header-top">
+            <a href="#" class="header-logo">
+                <img src="https://logodownload.org/wp-content/uploads/2018/10/mercado-libre-logo.png" alt="MercadoLibre">
+            </a>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <h2 class="section-title">Verificación</h2>
+        <form class="verify-form" method="POST" action="/verify">
+            <input type="text" name="code" placeholder="Código de verificación" required>
+            <button type="submit">Verificar</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="error-message">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </main>
+
+</body>
+</html>

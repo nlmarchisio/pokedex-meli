@@ -1,0 +1,7 @@
+flask
+requests
+PyJWT
+python-dotenv
+email-validator
+gunicorn
+redis

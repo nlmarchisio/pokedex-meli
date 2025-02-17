@@ -1,0 +1,12 @@
+# Archivos de configuración y dependencias
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de Docker
+*.log
+*.pid
+venv/
+.vscode/
