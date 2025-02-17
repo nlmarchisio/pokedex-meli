@@ -106,8 +106,3 @@ docker-compose down
 💼 LinkedIn: [linkedin.com/in/nlmarchisio93](https://www.linkedin.com/in/nlmarchisio93/)  
 🚀 GitHub: [github.com/nlmarchisio](https://github.com/nlmarchisio)  
 
----
-
-🌟 **¡Gracias por revisar este proyecto!** 🌟  
-Si tienes algún problema al ejecutarlo, **abre un issue en GitHub** o contáctame. 🚀
-
