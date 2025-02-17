@@ -1,7 +1,15 @@
 # 🏆 Pokedex API - MercadoLibre Challenge
 
-Este proyecto es una aplicación web que permite consultar información de Pokémon utilizando la **PokéAPI**.  
-Está desarrollada con **Flask**, dockerizada y lista para ejecutarse fácilmente con **Docker Compose**.
+Los Pokémon son una clase de criaturas inspiradas en animales reales, insectos, objetos, plantas o criaturas mitológicas. Cada uno de ellos tiene uno o varios tipos (fuego, agua, hielo, entre otros) y, según su tipo, son capaces de realizar diferentes habilidades. En esta ocasión, queremos conocer cuáles son las habilidades de ciertos Pokémon a través de esta API.
+
+Esta API desarrollada en **Flask** permite:
+- **Obtener el tipo de un Pokémon** (fuego, agua, tierra, aire, etc.) según su nombre.
+- **Obtener un Pokémon al azar** de un tipo específico.
+- **Obtener el Pokémon con el nombre más largo** de cierto tipo.
+
+Además de estas funcionalidades, la API está diseñada para ser **segura**, implementando un esquema de autenticación basado en JWT y verificación por correo electrónico.
+
+Para obtener los datos de los Pokémon, se utiliza **PokéAPI** como fuente de información.
 
 ---
 
