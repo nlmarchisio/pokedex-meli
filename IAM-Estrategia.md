@@ -15,12 +15,17 @@ Kimberly.sas es una empresa con operaciones en múltiples países de Latinoamér
 Para garantizar la seguridad de identidad y acceso en Kimberly.sas, se propone la implementación de un **modelo centralizado de gestión de identidades** basado en **Zero Trust y principios de mínimo privilegio**.
 
 ### **🔑 1. Autenticación y Federaciones de Identidad**
-📌 **Solución propuesta:** Implementación de **SSO (Single Sign-On)** con un **IdP centralizado** como **Azure AD, Okta o CyberArk**.  
+📌 **Solución propuesta:** Implementación de **SSO (Single Sign-On)** con un **IdP centralizado** como **Azure AD, Okta, Auth0 o CyberArk**.  
 
 - **SSO + Multi-Factor Authentication (MFA)** para todas las aplicaciones.
-- **Federación con protocolos estándar:** OIDC, SAML, SCIM, LDAP para interoperabilidad.
-- **Uso de autenticación sin contraseña (Passwordless)**.
-- **Implementación de CyberArk como solución de autenticación segura y gestión de identidades**.
+- **Federación con protocolos estándar:** OIDC, SAML, SCIM, LDAP para interoperabilidad, seleccionando los más adecuados según las necesidades de integración.
+  - **OIDC:** Para aplicaciones web y móviles modernas.
+  - **SAML:** Para aplicaciones empresariales legacy.
+  - **SCIM:** Para sincronización automática de identidades.
+  - **LDAP:** Para integración con directorios on-premises.
+- **Uso de autenticación sin contraseña (Passwordless)** a través de **Auth0, WebAuthn, Magic Links o OTP**.
+- **Para cuentas estándar (empleados y clientes):** Se recomienda **Auth0 con Passwordless + MFA**.
+- **Para cuentas administrativas y críticas:** Se recomienda **CyberArk** como solución de **Privileged Access Management (PAM)**.
 
 ### **🛡️ 2. Autorización y Control de Acceso**
 📌 **Solución propuesta:** Implementación de **RBAC + ABAC (Role-Based Access Control y Attribute-Based Access Control)**.
@@ -44,6 +49,7 @@ Para garantizar la seguridad de identidad y acceso en Kimberly.sas, se propone l
 - **Gestión de cuentas con CyberArk o HashiCorp Vault**.
 - **Sesiones administradas con grabación y revisión** para evitar abuso de privilegios.
 - **Autenticación reforzada (MFA y claves de hardware) para usuarios con privilegios**.
+- **CyberArk sigue siendo necesario para la gestión segura de cuentas críticas, incluso si se usa Passwordless en cuentas estándar**.
 
 ---
 
@@ -73,7 +79,8 @@ Dado que la aplicación **P@yroll** maneja información sensible de nóminas, se
 | **PAM para admins** | Protección de cuentas con acceso privilegiado. |
 | **SIEM para auditoría** | Monitoreo centralizado de accesos y eventos de seguridad. |
 | **Integración P@yroll** | Autenticación delegada y restricción de accesos. |
-| **CyberArk para autenticación** | Implementación de CyberArk como IdP y gestión de identidad. |
+| **Auth0 para Passwordless** | Autenticación sin contraseña para usuarios estándar. |
+| **CyberArk para admins** | Protección de accesos privilegiados y gestión de credenciales. |
 | **SailPoint para IGA** | Gestión del ciclo de vida de identidades y cumplimiento normativo. |
 
 ---
