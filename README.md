@@ -107,4 +107,4 @@ docker-compose down
 🚀 GitHub: [github.com/nlmarchisio](https://github.com/nlmarchisio)  
 
 📌 **Estrategia IAM para Kimberly.sas**  
-Consulta el documento completo [aquí](IAM-Estrategia.md).
+Consulta el documento completo [aquí](IAM-Estrategia.md)
