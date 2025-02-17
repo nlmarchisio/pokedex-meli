@@ -41,7 +41,7 @@ Para garantizar la seguridad de identidad y acceso en Kimberly.sas, se propone l
 
 - Implementación de **Microsoft Intune** para gestionar dispositivos.
 - **Requerimiento de dispositivos de confianza** (corporativos o autenticados con certificaciones).
-- **Monitoreo continuo con herramientas EDR** (CrowdStrike, SentinelOne) para detectar amenazas.
+- **Monitoreo continuo con herramientas EDR y SIEM** como **Splunk, Microsoft Defender, CyberArk EPM, SentinelOne o CrowdStrike** para detectar y responder ante amenazas.
 
 ### **🛑 4. Protección de Cuentas Administrativas**
 📌 **Solución propuesta:** Implementación de un **PAM (Privileged Access Management)**.
@@ -65,7 +65,7 @@ Dado que la aplicación **P@yroll** maneja información sensible de nóminas, se
 ### **🔒 2. Controles de Seguridad Adicionales**
 - **MFA obligatorio** para los usuarios de P@yroll.
 - **Autorización basada en roles (RBAC) estricta** para evitar accesos innecesarios.
-- **Monitoreo de accesos con SIEM (Security Information and Event Management)**.
+- **Monitoreo de accesos con SIEM como Splunk**.
 - **Seguridad en tránsito y en reposo** (TLS 1.2+ y cifrado de base de datos AES-256).
 
 ---
@@ -77,7 +77,7 @@ Dado que la aplicación **P@yroll** maneja información sensible de nóminas, se
 | **RBAC + ABAC** | Accesos limitados por roles y atributos contextuales. |
 | **MDM y EDR** | Protección de dispositivos contra amenazas. |
 | **PAM para admins** | Protección de cuentas con acceso privilegiado. |
-| **SIEM para auditoría** | Monitoreo centralizado de accesos y eventos de seguridad. |
+| **SIEM para auditoría** | Monitoreo centralizado con **Splunk**. |
 | **Integración P@yroll** | Autenticación delegada y restricción de accesos. |
 | **Auth0 para Passwordless** | Autenticación sin contraseña para usuarios estándar. |
 | **CyberArk para admins** | Protección de accesos privilegiados y gestión de credenciales. |
