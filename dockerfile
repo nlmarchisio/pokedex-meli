@@ -1,4 +1,4 @@
-# Usar una imagen base ligera de Python para reducir tamaño
+# Uso python:3.9-slim para que sea mas liviano.
 FROM python:3.9-slim
 
 # Establecer el directorio de trabajo en el contenedor
@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copiar el resto de la aplicación después de instalar dependencias (mejora caching)
+# Copiar el resto de la aplicación después de instalar dependencias
 COPY . .
 
 # Exponer el puerto 5000 para Flask
