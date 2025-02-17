@@ -1,4 +1,3 @@
-flask
 requests
 PyJWT
 python-dotenv
